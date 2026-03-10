@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    public float jumpForce = 20f;
     public bool isGrounded; // This will be used for the jumping conditions.
     
     void Start()
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
+        JumpInput();
     }
 
     void Move()
@@ -24,14 +24,22 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(1*moveSpeed, rb.linearVelocity.y);
     }
 
-    void Jump() // Using keyboard control for early work.
+    public void Jump() // Removed keyboard input so that logic can be implemented into notes control.
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
         }
         
+    }
+
+    void JumpInput() // Using keyboard control for early work.
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
