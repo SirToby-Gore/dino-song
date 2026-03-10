@@ -28,9 +28,11 @@ public class Note
     public float dynamic; // 0 to 100
     public Instrument instrument;
 
+    public AudioSource audioSource;
+    public GameObject tempObject;
+
+    public Note() {}
     private Destroyer destroyer;
-    private AudioSource audioSource;
-    private GameObject tempObject;
 
     public Note(Notes note, float duration, int octave, Accent accent, Action action, float dynamic, Instrument instrument)
     {
@@ -108,9 +110,16 @@ public class Note
     public void PlayNote()
     {
         if (audioSource.clip == null) return;
-        
+
         audioSource.volume = dynamic / 100f;
         audioSource.Play();
+    }
+
+    public void StopNote()
+    {
+        if (audioSource.clip == null) return;
+
+        audioSource.Stop();
     }
 
     public void PlayNoteAndAction()
