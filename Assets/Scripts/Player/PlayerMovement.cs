@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 20f;
     public bool isGrounded; // This will be used for the jumping conditions.
+    public float direction = 1;
     
     void Start()
     {
@@ -19,9 +20,14 @@ public class PlayerMovement : MonoBehaviour
         JumpInput();
     }
 
-    void Move()
+    public void Move()
     {
-        rb.linearVelocity = new Vector2(1*moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(direction*moveSpeed, rb.linearVelocity.y); 
+    }
+
+    public void ChangeDirection()
+    {
+        direction = direction * -1;
     }
 
     public void Jump()
