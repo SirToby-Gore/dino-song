@@ -28,6 +28,7 @@ public class Note
     public float dynamic; // 0 to 100
     public Instrument instrument;
 
+    private Destroyer destroyer;
     private AudioSource audioSource;
     private GameObject tempObject;
 
@@ -44,6 +45,7 @@ public class Note
         // In Unity, we need a GameObject to hold the AudioSource
         tempObject = new GameObject("TempNote_" + note.ToString());
         audioSource = tempObject.AddComponent<AudioSource>();
+        destroyer = tempObject.AddComponent<Destroyer>();
         
         // Load the clip from the "Resources" folder
         AudioClip clip = Resources.Load<AudioClip>(GetFilePath());
@@ -70,9 +72,6 @@ public class Note
             int delayMs = Mathf.CeilToInt(tempNote.audioSource.clip.length * 1000);
             await Task.Delay(delayMs);
         }
-
-        // Cleanup the object
-        UnityEngine.Object.Destroy(tempNote.tempObject);
     }
 
     public string GetFilePath()
