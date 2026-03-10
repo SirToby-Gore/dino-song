@@ -1,17 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ColliderScreenChange : MonoBehaviour
 {
     private float positionX;
 
-    private PlayerMovement playerMovement;
 
-    public string sceneToLoad;
+    public Transform nextSceneCenter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerMovement = FindFirstObjectByType<PlayerMovement>();
+        
     }
 
     // Update is called once per frame
@@ -24,10 +22,8 @@ public class ColliderScreenChange : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
-            positionX = gameObject.transform.position.x;
-            SceneManager.LoadScene(sceneToLoad);
-            playerMovement.transform.position = new Vector2(positionX, playerMovement.transform.position.y);
+            Camera.main.transform.position = new Vector3(nextSceneCenter.position.x, nextSceneCenter.position.y, -25f); // Move the camera to the next scene's center position
         }
     }
 }
+//Github test commit
