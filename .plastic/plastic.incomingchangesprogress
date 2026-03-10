@@ -1,0 +1,36 @@
+[
+  {
+    "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
+    "AncestorCsetIds": [
+      18
+    ],
+    "SourceCsetId": 31,
+    "DestinationCsetId": 18,
+    "FileConflicts": [
+      {
+        "Path": "/Dino-song.slnx",
+        "ItemId": 193,
+        "ParentItemId": 2,
+        "BaseRevId": 188,
+        "SourceRevId": 305,
+        "DestinationRevId": 188
+      },
+      {
+        "Path": "/Assets/Scenes/MainScene.unity",
+        "ItemId": 208,
+        "ParentItemId": 200,
+        "BaseRevId": 299,
+        "SourceRevId": 1138,
+        "DestinationRevId": 299
+      },
+      {
+        "Path": "/ProjectSettings/TagManager.asset",
+        "ItemId": 152,
+        "ParentItemId": 131,
+        "BaseRevId": 300,
+        "SourceRevId": 1143,
+        "DestinationRevId": 300
+      }
+    ]
+  }
+]
