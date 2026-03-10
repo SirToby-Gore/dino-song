@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9347623367510754486db56c3b721bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderScreenChange
-  sceneToLoad: MainMenu
+  sceneToLoad: Level_2
 --- !u!1 &716589468
 GameObject:
   m_ObjectHideFlags: 0
