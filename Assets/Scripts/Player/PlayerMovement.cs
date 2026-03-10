@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(1*moveSpeed, rb.linearVelocity.y);
     }
 
-    public void Jump() // Removed keyboard input so that logic can be implemented into notes control.
+    public void Jump()
     {
         if (isGrounded)
         {
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    void JumpInput() // Using keyboard control for early work.
+    void JumpInput()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {

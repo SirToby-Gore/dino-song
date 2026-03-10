@@ -11,7 +11,7 @@ public class ColliderScreenChange : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement = FindFirstObjectByType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class ColliderScreenChange : MonoBehaviour
 
             positionX = gameObject.transform.position.x;
             SceneManager.LoadScene(sceneToLoad);
-            playerMovement.transform.position.x = positionX;
+            playerMovement.transform.position = new Vector2(positionX, playerMovement.transform.position.y);
         }
     }
 }
