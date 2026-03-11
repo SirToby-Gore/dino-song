@@ -1173,7 +1173,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &1668458446
+=======
+--- !u!1 &1624711796
+>>>>>>> bf2a5f0ec3a26fd49d741099800423e1f182fda0
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,20 +1185,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1668458447}
   m_Layer: 0
   m_Name: Active Collider
+=======
+  - component: {fileID: 1624711798}
+  - component: {fileID: 1624711797}
+  m_Layer: 0
+  m_Name: NotesTimer
+>>>>>>> bf2a5f0ec3a26fd49d741099800423e1f182fda0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1668458447
+=======
+--- !u!114 &1624711797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624711796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dd2eec02e76314db19d1c8d3600ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotesTimer
+  BPM: 120
+  note_timer: 0
+  playing_sound: 0
+  time_signature: 0400000004000000
+--- !u!4 &1624711798
+>>>>>>> bf2a5f0ec3a26fd49d741099800423e1f182fda0
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1668458446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1205,6 +1237,16 @@ Transform:
   - {fileID: 2145043737}
   - {fileID: 165525722}
   m_Father: {fileID: 1961773552}
+=======
+  m_GameObject: {fileID: 1624711796}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.59737, y: 9.82359, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+>>>>>>> bf2a5f0ec3a26fd49d741099800423e1f182fda0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916252796
 GameObject:
@@ -1511,4 +1553,8 @@ SceneRoots:
   - {fileID: 1258358804}
   - {fileID: 1399702583}
   - {fileID: 1916252799}
+<<<<<<< HEAD
   - {fileID: 135230448}
+=======
+  - {fileID: 1624711798}
+>>>>>>> bf2a5f0ec3a26fd49d741099800423e1f182fda0
