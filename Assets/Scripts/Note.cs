@@ -28,11 +28,17 @@ public class Note
     public float dynamic; // 0 to 100
     public Instrument instrument;
 
+<<<<<<< HEAD
+    private Destroyer destroyer;
+    private AudioSource audioSource;
+    private GameObject tempObject;
+=======
     public AudioSource audioSource;
     public GameObject tempObject;
 
     public Note() {}
     private Destroyer destroyer;
+>>>>>>> bf2a5f0ec3a26fd49d741099800423e1f182fda0
 
     public Note(Notes note, float duration, int octave, Accent accent, Action action, float dynamic, Instrument instrument)
     {
