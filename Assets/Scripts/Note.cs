@@ -47,7 +47,6 @@ public class Note
         // In Unity, we need a GameObject to hold the AudioSource
         tempObject = new GameObject("TempNote_" + note.ToString());
         audioSource = tempObject.AddComponent<AudioSource>();
-        destroyer = tempObject.AddComponent<Destroyer>();
         
         // Load the clip from the "Resources" folder
         AudioClip clip = Resources.Load<AudioClip>(GetFilePath());

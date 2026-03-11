@@ -9,16 +9,17 @@ public class NotesTimer : MonoBehaviour
     public List<int> time_signature = new List<int> { 4, 4 };
 
     float targetDuration;
+    Note note_name;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            Note note_name = new Note
+            note_name = new Note
             (
-                Notes.C,
+                Notes.F,
                 4f,
-                6,
+                4,
                 Accent.Natural,
                 () => { },
                 100,
@@ -29,28 +30,19 @@ public class NotesTimer : MonoBehaviour
 
             note_timer = 0f;
             playing_sound = true;
+            Debug.Log(note_name.audioSource.clip.length);
 
-            if (playing_sound == true)
-            { 
-                note_name.PlayNote(); 
-            }
-            else
-            {
-                note_name.audioSource.volume = 0f;
-            }
-
-
+            note_name.PlayNote();
         }
 
         if (playing_sound)
         {
             note_timer += Time.deltaTime;
 
-            Debug.Log(Mathf.Round(note_timer));
-
             if (note_timer >= targetDuration)
             {
                 playing_sound = false;
+                note_name.StopNote(); // stop audio
             }
         }
     }

@@ -119,6 +119,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &267344617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267344619}
+  - component: {fileID: 267344618}
+  m_Layer: 0
+  m_Name: NotesTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &267344618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267344617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dd2eec02e76314db19d1c8d3600ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotesTimer
+  BPM: 120
+  note_timer: 0
+  playing_sound: 0
+  time_signature: 0400000004000000
+--- !u!4 &267344619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267344617}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.51649, y: 5.61732, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &349606624
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9347623367510754486db56c3b721bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderScreenChange
-  sceneToLoad: MainMenu
+  nextSceneCenter: {fileID: 0}
 --- !u!1 &716589468
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +690,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -755,6 +803,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 7
   isGrounded: 0
+  direction: 1
 --- !u!1 &1332878448
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,54 +1020,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1624711796
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1624711798}
-  - component: {fileID: 1624711797}
-  m_Layer: 0
-  m_Name: NotesTimer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1624711797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624711796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10dd2eec02e76314db19d1c8d3600ae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NotesTimer
-  BPM: 120
-  note_timer: 0
-  playing_sound: 0
-  time_signature: 0400000004000000
---- !u!4 &1624711798
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624711796}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.59737, y: 9.82359, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916252796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,4 +1201,4 @@ SceneRoots:
   - {fileID: 716589469}
   - {fileID: 1399702583}
   - {fileID: 1916252799}
-  - {fileID: 1624711798}
+  - {fileID: 267344619}
