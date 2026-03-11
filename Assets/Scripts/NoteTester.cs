@@ -43,5 +43,35 @@ public class NoteTester : MonoBehaviour
 
             note.PlayNoteAndAction();
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Note note = new Note(
+                Notes.C,
+                Duration.Crochet,
+                4,
+                Accent.Natural,
+                player.Crouch,
+                80,
+                Instrument.Piano
+            );
+
+            note.PlayNoteAndAction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Note note = new Note(
+                Notes.C,
+                Duration.Crochet,
+                4,
+                Accent.Natural,
+                player.Dash,
+                80,
+                Instrument.Piano
+            );
+
+            note.PlayNoteAndAction();
+        }
     }
 }
