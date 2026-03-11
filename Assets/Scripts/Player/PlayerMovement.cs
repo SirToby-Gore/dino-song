@@ -99,8 +99,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))  // Added Tag to MainFloor
         {
-            isGrounded = true;
-            airCount = 1;
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                // Check if the surface normal is pointing upward
+                if (contact.normal.y > 0.5f)
+                {
+                    isGrounded = true;
+                    airCount = 1;
+                    break;
+                }
+            }
         }
     }
 }
