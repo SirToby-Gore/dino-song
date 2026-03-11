@@ -10,11 +10,13 @@ public class NotesTimer : MonoBehaviour
 
     float targetDuration;
 
+    Note currentNote;   // store the note
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            Note note_name = new Note
+            currentNote = new Note
             (
                 Notes.C,
                 4f,
@@ -25,21 +27,12 @@ public class NotesTimer : MonoBehaviour
                 Instrument.Piano
             );
 
-            targetDuration = (60f / BPM) * (note_name.duration / (float)time_signature[0]) * time_signature[1];
+            targetDuration = (60f / BPM) * (currentNote.duration / (float)time_signature[0]) * time_signature[1];
 
             note_timer = 0f;
             playing_sound = true;
 
-            if (playing_sound == true)
-            { 
-                note_name.PlayNote(); 
-            }
-            else
-            {
-                note_name.audioSource.volume = 0f;
-            }
-
-
+            currentNote.PlayNote();
         }
 
         if (playing_sound)
@@ -51,6 +44,7 @@ public class NotesTimer : MonoBehaviour
             if (note_timer >= targetDuration)
             {
                 playing_sound = false;
+                currentNote.audioSource.Stop(); // stop the sound
             }
         }
     }
