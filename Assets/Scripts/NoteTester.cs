@@ -14,12 +14,13 @@ public class NoteTester : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+
+        if (Input.GetKeyDown(KeyCode.G))
         {
             Note note = new Note(
-                Notes.C,
+                Notes.B,
                 Duration.Crochet,
-                4,
+                3,
                 Accent.Natural,
                 player.Jump,
                 80,
@@ -29,13 +30,13 @@ public class NoteTester : MonoBehaviour
             note.PlayNoteAndAction();
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             Note note = new Note(
-                Notes.C,
+                Notes.D,
                 Duration.Crochet,
                 4,
-                Accent.Natural,
+                Accent.Sharp,
                 player.ChangeDirection,
                 80,
                 Instrument.Piano
@@ -44,13 +45,13 @@ public class NoteTester : MonoBehaviour
             note.PlayNoteAndAction();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             Note note = new Note(
-                Notes.C,
+                Notes.F,
                 Duration.Crochet,
                 4,
-                Accent.Natural,
+                Accent.Sharp,
                 player.Crouch,
                 80,
                 Instrument.Piano
@@ -59,14 +60,29 @@ public class NoteTester : MonoBehaviour
             note.PlayNoteAndAction();
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             Note note = new Note(
-                Notes.C,
+                Notes.E,
                 Duration.Crochet,
                 4,
                 Accent.Natural,
                 player.Dash,
+                80,
+                Instrument.Piano
+            );
+
+            note.PlayNoteAndAction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Note note = new Note(
+                Notes.G,
+                Duration.Crochet,
+                4,
+                Accent.Natural,
+                () => { },
                 80,
                 Instrument.Piano
             );

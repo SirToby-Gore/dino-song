@@ -16,7 +16,7 @@ public class WarpUp : MonoBehaviour
         {
             Debug.Log("COLLISION ACTIVE");
             Vector3 pos = player_body.transform.position;
-            pos.y += 15f;
+            pos.y += 17.5f;
             player_body.transform.position = pos;
         }
     }

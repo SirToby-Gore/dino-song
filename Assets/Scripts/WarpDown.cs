@@ -12,9 +12,8 @@ public class WarpDown : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("COLLISION ACTIVE");
             Vector3 pos = player_body.transform.position;
-            pos.y -= 15f;
+            pos.y -= 5f;
             player_body.transform.position = pos;
         }
     }
