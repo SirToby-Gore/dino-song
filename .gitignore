@@ -58,4 +58,4 @@ crashlytics-build.properties
 **/assets/streamingassets/*/aa/*
 .DS_Store*
 Thumbs.db
-Desktop.ini
+Desktop.ini\n.plastic/
