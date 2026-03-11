@@ -4,7 +4,9 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float moveSpeed = 5f;
+    public float moveSpeed = setMoveSpeed;
+    public static float setMoveSpeed = 5f;
+    public float dashSpeed = setMoveSpeed * 3;
     public float tempMoveSpeed;
     public float jumpForce = 20f;
     public bool isGrounded; // This will be used for the jumping conditions.
@@ -77,12 +79,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Physics.gravity = new Vector3(0, Physics.gravity.y, 0);
         tempYGravity = Physics.gravity.y;
-        tempMoveSpeed = moveSpeed;
 
         Physics.gravity = new Vector3(0, 0, 0);
-        moveSpeed = moveSpeed * 3;
+        moveSpeed = dashSpeed;
         yield return new WaitForSeconds(delay);
-        moveSpeed = tempMoveSpeed;
+        moveSpeed = setMoveSpeed;
         Physics.gravity = new Vector3(0, tempYGravity, 0);
     }
 
