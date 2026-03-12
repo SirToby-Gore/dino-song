@@ -10,7 +10,7 @@ public class NotesTimer : MonoBehaviour
 
     float targetDuration;
 
-    Note currentNote;   // store the note
+    Note currentNote;
 
     void Update()
     {
@@ -44,7 +44,7 @@ public class NotesTimer : MonoBehaviour
             if (note_timer >= targetDuration)
             {
                 playing_sound = false;
-                currentNote.audioSource.Stop(); // stop the sound
+                currentNote.audioSource.Stop();
             }
         }
     }

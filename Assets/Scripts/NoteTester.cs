@@ -17,7 +17,8 @@ public class NoteTester : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Note note = new Note(
+            Note note = new Note
+            (
                 Notes.B,
                 Duration.Crochet,
                 3,

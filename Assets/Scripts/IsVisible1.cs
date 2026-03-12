@@ -17,12 +17,14 @@ public class isVisibile : MonoBehaviour
 
         if (viewPos.y < 0)
         {
+            Debug.Log("has gone offscreen down");
             pos.y -= 2f * main_camera.orthographicSize;
             main_camera.transform.position = pos;
         }
 
         if (viewPos.y > 1)
         {
+            Debug.Log("has gone offscreen up");
             pos.y += 2f * main_camera.orthographicSize;
             main_camera.transform.position = pos;
         }
